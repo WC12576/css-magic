@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-bg&border</title>
+    <style>
+    .parent{
+        width: 500px;
+        height: 1200px;
+        background: #888;
+    }
+    .parent div{
+        margin: 30px 20px;
+        width: 100px;
+    }
+    .ch1{
+        background: white;
+        background-clip: padding-box;
+        border: 10px solid hsla(0,0%,100%,.5);
+    }
+    .ch2{
+        background: yellowgreen;
+        box-shadow: 0 0 0 10px #655,
+                    0 0 0 15px deeppink,
+                    0 2px 5px 15px rgba(0,0,0,.6);
+    }
+    .ch3{
+        background: yellowgreen;
+        border: 10px solid #655;
+        outline: 5px solid deeppink;
+    }
+    .ch4{
+        background: tan;
+        border-radius: .8em;
+        padding: 1em;
+        box-shadow: 0 0 0 .6em #655;
+        outline: .6em solid #655;
+    }
+    .ch5{
+        height: 90px;
+        background: linear-gradient(#fb3 33.3%,#58a 0, #58a 66.6%, yellowgreen 0);
+        background-size: 100% 45px;
+    }
+    .ch6{
+        height: 50px;
+        background: linear-gradient(90deg, #fb3 50%, #58a 0);/* 可旋转任意角度*/
+        background-size: 50px 100%;
+    }
+    .ch7{
+        height: 100px;
+        background:#58a;
+        background-image: repeating-linear-gradient(30deg,
+                            hsla(0,0%,100%,.1),
+                            hsla(0,0%,100%,.1) 15px,
+                            transparent 0,transparent 30px
+        );
+    }
+    .ch8{
+        height: 90px;
+        background: white;
+        background-image: linear-gradient(90deg,
+                            rgba(200,0,0,.5) 50%,transparent 0),
+                          linear-gradient(
+                            rgba(200,0,0,.5) 50%,transparent 0);
+        background-size: 30px 30px;
+    }
+    .ch9{
+        height: 100px;
+        background: #58a;
+        background-image: linear-gradient(white 1px, transparent 0),
+                          linear-gradient(90deg, white 1px, transparent 0);
+        background-size: 30px 30px;
+    }
+    .ch10{
+        height: 90px;
+        background: #655;
+        background-image: radial-gradient(tan 30%,transparent 0),
+                          radial-gradient(tan 30%,transparent 0);
+        background-size: 0 0 , 15px 15px;
+    }
+    .ch11{
+        height: 90px;
+        background: #eee;
+        background-image: linear-gradient(45deg, #bbb 25%,transparent 0), 
+                          linear-gradient(45deg, transparent 75%,#bbb 0),        
+                          linear-gradient(45deg, #bbb 25%,transparent 0), 
+                          linear-gradient(45deg, transparent 75%,#bbb 0);
+        background-position: 0 0,15px 15px,
+                             15px 15px,30px 30px;
+        background-size: 30px 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="ch1">半透明边框</div>
+        <div class="ch2">多重边框1</div>
+        <div class="ch3">多重边框2</div>
+        <div class="ch4">内圆角</div>
+        <div class="ch5">水平条纹</div>
+        <div class="ch6">垂直条纹</div>
+        <div class="ch7">同色系条纹</div>
+        <div class="ch8">方格背景</div>
+        <div class="ch9">蓝图网格</div>
+        <div class="ch10">波点</div>
+        <div class="ch11">棋盘</div>
+    </div>
+</body>
+</html>
